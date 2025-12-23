@@ -34,9 +34,13 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       {(loading || routeLoading) && <Preloader />}
-      <MainLayout>
+      {router.pathname === '/' ? (
         <Component {...pageProps} />
-      </MainLayout>
+      ) : (
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      )}
     </>
   );
 }
