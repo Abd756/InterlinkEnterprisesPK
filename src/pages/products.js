@@ -46,13 +46,13 @@ export default function Products() {
          2. CATEGORY FILTERS
          ---------------------------------------------------------------------------------- */}
       <section className="sticky top-16 z-30 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center overflow-x-auto no-scrollbar gap-2 md:gap-4">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-start md:justify-center overflow-x-auto gap-3 md:gap-4 no-scrollbar">
           {productCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full whitespace-nowrap font-semibold transition-all duration-300 ${activeCategory === cat
-                ? "bg-primary text-white shadow-lg shadow-blue-500/30"
+              className={`px-6 py-2 rounded-xl whitespace-nowrap font-bold text-sm transition-all duration-300 ${activeCategory === cat
+                ? "bg-primary text-white shadow-lg shadow-blue-500/20"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
             >
@@ -113,7 +113,7 @@ export default function Products() {
                 </div>
 
                 {/* Decorative Accent */}
-                <div className="absolute bottom-0 left-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left w-full"></div>
+                <div className="absolute bottom-0 left-0 h-1 bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left w-full"></div>
               </motion.div>
             ))}
           </AnimatePresence>
