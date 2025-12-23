@@ -1,53 +1,87 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-const services = [
-  {
-    image: '/images/Services/Cable Management Systems.jpeg',
-    title: 'Industrial Automation',
-    desc: 'Cutting-edge automation solutions for process industries, improving efficiency and reliability.'
-  },
-  {
-    image: '/images/Services/Electrical and Control Panel Commissioning and Installation.jpeg',
-    title: 'Control Systems',
-    desc: 'Design and implementation of advanced control systems for seamless industrial operations.'
-  },
-  {
-    image: '/images/Services/Installation of Complete Projects and Products.jpeg',
-    title: 'SCADA & Monitoring',
-    desc: 'Real-time monitoring and control with robust SCADA systems tailored to your needs.'
-  }
-];
+import servicesData from '../data/servicesData';
 
 export default function HomeServicesSection() {
   return (
-    <section className="w-full py-16 px-4 md:px-0 bg-white">
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-10 text-center drop-shadow-lg">Our Services</h2>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          {services.map((service, idx) => (
+    <section className="w-full py-20 bg-gray-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Section Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold text-orange-600 mb-4 tracking-tight">
+            Our <span className="text-primary">Services</span>
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Providing top-tier automation and control solutions tailored to industrial needs.
+          </p>
+        </motion.div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {servicesData.slice(0, 3).map((service, idx) => (
             <motion.div
               key={idx}
-              className="relative bg-white border border-gray-200 shadow-2xl rounded-3xl flex flex-col items-center p-7 group overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-blue-200/60 hover:shadow-2xl"
+              className="group relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: idx * 0.15 }}
-              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true }}
             >
-              <div className="relative z-10 flex flex-col items-center w-full">
-                <img src={service.image} alt={service.title} className="w-full h-44 object-cover rounded-xl mb-4 group-hover:scale-105 group-hover:rotate-2 transition-transform duration-500 ease-out shadow-lg" />
-                {/* Icon placeholder: replace with real icons if available */}
-                {/* <div className="mb-3 text-4xl">[icon]</div> */}
-                <h3 className="text-xl font-bold text-gray-800 mb-2 text-center drop-shadow-sm group-hover:text-accent transition-colors duration-300">{service.title}</h3>
-                <p className="text-gray-600 text-center text-base font-medium mb-4 group-hover:text-primary transition-colors duration-300">{service.desc}</p>
-                <Link href="/services" className="inline-block bg-accent text-white font-semibold px-6 py-2 rounded shadow hover:bg-primary transition-colors duration-200 mt-2">Learn More</Link>
+              {/* Image Container with Overlay */}
+              <div className="relative h-60 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"></div>
+
+                {/* Title Overlay on Image (Mobile/Design Choice) */}
+                <div className="absolute bottom-4 left-6 right-4">
+                  <h3 className="text-2xl font-bold text-white mb-1 shadow-sm">{service.title}</h3>
+                </div>
               </div>
-              {/* Border glowing effect restored */}
-              <span className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-accent group-hover:shadow-accent/40 group-hover:shadow-2xl transition-all duration-500 pointer-events-none z-10" />
+
+              {/* Content Body */}
+              <div className="p-8">
+                <p className="text-gray-600 mb-6 leading-relaxed min-h-[80px]">
+                  {service.desc}
+                </p>
+
+                <Link href={'/contact'} className="inline-flex items-center text-primary font-semibold group-hover:text-primary transition-colors">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Decorative top border */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </motion.div>
           ))}
         </div>
-        <Link href="/services" className="inline-block bg-accent text-white font-semibold px-8 py-3 rounded shadow hover:bg-primary transition-colors duration-200">Explore More</Link>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-orange-600 rounded-full shadow-lg hover:bg-primary hover:shadow-xl transition-all transform hover:-translate-y-1">
+            Explore All Services
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import Carousel from '../components/Carousel';
 import HomeAboutSection from '../components/HomeAboutSection';
+import HomeCertificatesSection from '../components/HomeCertificatesSection';
 import HomeServicesSection from '../components/HomeServicesSection';
 import dynamic from 'next/dynamic';
 const HomeWhyChooseUsSection = dynamic(() => import('../components/HomeWhyChooseUsSection'), { ssr: false });
@@ -12,6 +13,7 @@ export default function Automation() {
                 <Carousel />
             </div>
             <HomeAboutSection />
+            <HomeCertificatesSection />
             <HomeServicesSection />
             <HomeWhyChooseUsSection />
             <ClientLogoSlider />

@@ -4,7 +4,13 @@ import ActiveLink from './ActiveLink';
 import { useState } from 'react';
 
 
+import { useRouter } from 'next/router';
+
 export default function Navbar() {
+  const router = useRouter();
+  // If we are in the manufacturing section, Home links there. Otherwise default to Automation.
+  const homeLink = router.pathname.startsWith('/manufacturing') ? '/manufacturing' : '/automation';
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="w-full flex items-center h-16 px-4">
@@ -15,7 +21,7 @@ export default function Navbar() {
         </div>
         <div className="flex-1 flex items-center justify-end">
           <div className="hidden md:flex space-x-8 lg:space-x-12">
-            <ActiveLink href="/">Home</ActiveLink>
+            <ActiveLink href={homeLink}>Home</ActiveLink>
             <ActiveLink href="/about">About Us</ActiveLink>
             <ActiveLink href="/products">Products</ActiveLink>
             <ActiveLink href="/services">Services</ActiveLink>
@@ -32,6 +38,8 @@ export default function Navbar() {
 }
 
 function MobileMenu() {
+  const router = useRouter();
+  const homeLink = router.pathname.startsWith('/manufacturing') ? '/manufacturing' : '/automation';
   const [open, setOpen] = useState(false);
   // Helper to close drawer on link click
   const handleLinkClick = () => setOpen(false);
@@ -67,7 +75,7 @@ function MobileMenu() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <ActiveLink href="/" >
+            <ActiveLink href={homeLink} >
               <span onClick={handleLinkClick}>Home</span>
             </ActiveLink>
             <ActiveLink href="/about">
