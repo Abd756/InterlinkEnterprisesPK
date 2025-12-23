@@ -329,37 +329,113 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900">Our Core <span className="text-primary">Values</span></h2>
-          <div className="w-20 h-1 bg-orange-500 mx-auto rounded-full mt-4"></div>
+          <span className="text-orange-500 font-bold tracking-wider uppercase">Our Philosophy</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2">Our Core <span className="text-primary">Values</span></h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full mt-6"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "Integrity", desc: "We conduct business with the highest ethical standards, ensuring transparency in all our dealings.", color: "bg-blue-50" },
-            { title: "Innovation", desc: "We constantly seek new technologies to provide smarter, more efficient solutions.", color: "bg-orange-50" },
-            { title: "Customer Focus", desc: "Our clients are at the heart of everything we do. Your success is our success.", color: "bg-blue-50" }
+            {
+              title: "Integrity",
+              desc: "We conduct business with the highest ethical standards, ensuring transparency in all our dealings.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+              color: "blue"
+            },
+            {
+              title: "Innovation",
+              desc: "We constantly seek new technologies to provide smarter, more efficient solutions.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+              color: "orange"
+            },
+            {
+              title: "Customer Focus",
+              desc: "Our clients are at the heart of everything we do. Your success is our success.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
+              color: "blue"
+            }
           ].map((value, idx) => (
             <motion.div
               key={idx}
-              className={`${value.color} p-8 rounded-2xl text-center hover:shadow-xl transition-all duration-300`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-              <p className="text-gray-600">{value.desc}</p>
+              {/* Hover Gradient Background */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${value.color === 'orange' ? 'from-orange-50 to-amber-50' : 'from-blue-50 to-indigo-50'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+
+              <div className="relative z-10">
+                <div className={`w-16 h-16 rounded-2xl ${value.color === 'orange' ? 'bg-orange-100 text-orange-600' : 'bg-blue-100 text-primary'} flex items-center justify-center mb-6 text-xl shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                  {value.icon}
+                </div>
+
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed font-medium">
+                  {value.desc}
+                </p>
+              </div>
+
+              {/* Decorative Corner */}
+              <div className={`absolute top-0 right-0 w-24 h-24 ${value.color === 'orange' ? 'bg-orange-500/5' : 'bg-primary/5'} rounded-bl-[4rem] group-hover:scale-150 transition-transform duration-500`}></div>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-white text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Work with Us?</h2>
-        <Link href="/contact" className="inline-block bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl">
-          Contact Us Today
-        </Link>
+      {/* Call to Action */}
+      <section className="py-24 px-6 md:px-0">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-900 to-gray-900 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
+            {/* Background Decorations */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+            <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
+
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <motion.h2
+                className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-400">Transform</span> Your Industry?
+              </motion.h2>
+
+              <motion.p
+                className="text-xl text-blue-100 mb-12 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                Join hundreds of satisfied clients who have elevated their manufacturing standards with our cutting-edge automation solutions.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-6"
+              >
+                <Link href="/contact" className="group relative px-10 py-5 bg-orange-500 rounded-full font-bold text-white text-lg overflow-hidden shadow-lg hover:shadow-orange-500/50 transition-all duration-300">
+                  <span className="relative z-10 flex items-center gap-2">
+                    Contact Us Today
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                  </span>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                </Link>
+
+                <Link href="/products" className="px-10 py-5 bg-transparent border-2 border-white/20 rounded-full font-bold text-white text-lg hover:bg-white/10 transition-colors">
+                  Explore Products
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </div>
