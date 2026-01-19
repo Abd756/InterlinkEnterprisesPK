@@ -60,12 +60,11 @@ export default function HomeAboutSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-orange-500 rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur-lg"></div>
+            <div className="w-full flex justify-center">
               <img
-                src="/images/Home_AboutUs.jpg"
+                src="/images/3D-logo.png"
                 alt="About Interlink Enterprises"
-                className="relative w-full h-80 object-cover rounded-xl shadow-2xl transform transition duration-500 group-hover:scale-[1.01]"
+                className="w-full h-auto max-h-80 object-contain"
               />
             </div>
 

@@ -1,19 +1,19 @@
 const servicesData = [
     {
         id: 1,
-        image: '/images/Services/PLC Panels.jpeg',
+        image: '/images/Services/Industrial Automation.png',
         title: 'Industrial Automation',
         desc: 'Advanced PLC systems and software solutions to streamline your industrial processes and increase throughput.'
     },
     {
         id: 2,
-        image: '/images/Services/Electrical and Control Panel Commissioning and Installation.jpeg',
+        image: '/images/Services/Electrical Commissioning.png',
         title: 'Electrical Commissioning',
         desc: 'Expert installation and professional commissioning of industrial electrical and control panels.'
     },
     {
         id: 3,
-        image: '/images/Services/Installation of Complete Projects and Products.jpeg',
+        image: '/images/Services/Project Installation.png',
         title: 'Project Installation',
         desc: 'Turnkey solutions for the installation of complete industrial projects, ensuring seamless integration.'
     },

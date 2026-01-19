@@ -16,9 +16,20 @@ export default function Products() {
       {/* ----------------------------------------------------------------------------------
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
-      <section className="relative w-full py-24 bg-gray-900 text-white overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 text-white overflow-hidden flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/Products/Products-Page-Banner.png" // Correct path based on your public folder structure
+            alt="Products Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Light Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+
         {/* Background Patterns */}
-        <div className="absolute inset-0 opacity-10 blur-[2px] pointer-events-none">
+        <div className="absolute inset-0 opacity-10 blur-[2px] pointer-events-none z-0">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-500 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
         </div>

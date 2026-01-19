@@ -24,7 +24,7 @@ export default function About() {
       {/* ----------------------------------------------------------------------------------
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
         {/* IMAGE PLACEHOLDER: Background Image of Industrial Plant or Office */}
         <div className="absolute inset-0 bg-gray-800">
           {/* <img src="/path/to/hero-bg.jpg" alt="Hero Background" className="w-full h-full object-cover opacity-40" /> */}

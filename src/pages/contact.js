@@ -24,7 +24,7 @@ export default function Contact() {
       {/* ----------------------------------------------------------------------------------
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
-      <section className="relative py-24 bg-gray-900 overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 opacity-10 blur-[2px] pointer-events-none">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
         </div>
@@ -181,8 +181,8 @@ export default function Contact() {
                     type="submit"
                     disabled={formState === 'sending'}
                     className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 ${formState === 'success'
-                        ? 'bg-green-500 text-white'
-                        : 'bg-primary text-white hover:bg-orange-500 shadow-lg hover:shadow-orange-500/30'
+                      ? 'bg-green-500 text-white'
+                      : 'bg-primary text-white hover:bg-orange-500 shadow-lg hover:shadow-orange-500/30'
                       }`}
                   >
                     {formState === 'idle' && (

@@ -23,7 +23,7 @@ export default function Services() {
       {/* ----------------------------------------------------------------------------------
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
-      <section className="relative py-24 bg-gray-900 overflow-hidden">
+      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 overflow-hidden flex items-center justify-center">
         {/* Abstract Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>

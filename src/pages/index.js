@@ -42,7 +42,7 @@ export default function Landing() {
             animate={{ scale: 1 }}
             transition={{ duration: 2 }}
             className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-[2000ms]"
-            style={{ backgroundImage: "url('/images/corousel/corousel-1.jpg')" }}
+            style={{ backgroundImage: "url('/images/corousel/Automation.png')" }}
           />
 
           {/* Dynamic Overlay */}
@@ -83,7 +83,7 @@ export default function Landing() {
             animate={{ scale: 1 }}
             transition={{ duration: 2 }}
             className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-[2000ms]"
-            style={{ backgroundImage: "url('/images/Home_AboutUs.jpg')" }}
+            style={{ backgroundImage: "url('/images/corousel/Foundry.png')" }}
           />
 
           {/* Dynamic Overlay */}
@@ -99,7 +99,7 @@ export default function Landing() {
               className="flex flex-col items-center max-w-lg translate-y-[20%] md:translate-y-0"
             >
               <h2 className="text-4xl md:text-7xl font-bold text-white mb-4 group-hover:tracking-wider transition-all duration-500 drop-shadow-2xl">
-                Manufacturing
+                Foundry
               </h2>
               <div className="flex flex-col items-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 transform translate-y-0 md:-translate-y-10 md:group-hover:translate-y-0">
                 <p className="text-white text-sm md:text-lg drop-shadow-md max-w-xs px-4">

@@ -2,28 +2,28 @@ import { useState, useEffect, useRef } from 'react';
 
 const slides = [
   {
-    image: '/images/corousel/corousel-1.jpg',
+    image: '/images/corousel/corousel-1.png',
     title: 'Empowering Industries with ',
     highlight: 'Automation',
     subtitle: 'At Interlink Enterprises, we specialize in delivering cutting-edge automation solutions, transforming industries across Pakistan with our high-quality products and services.',
     badge: 'INTERLINK GROUP OF COMPANIES',
   },
   {
-    image: '/images/corousel/corousel-2.jpg',
+    image: '/images/corousel/corousel-2.png',
     title: 'Over Three Decades of ',
     highlight: 'Excellence',
     subtitle: 'Established Since 1996\nInterlink Enterprises has been at the forefront of automation in Pakistan, offering state-of-the-art solutions to diverse industries, from oil & gas to FMCG and power plants.',
     badge: '',
   },
   {
-    image: '/images/corousel/corousel-3.jpg',
+    image: '/images/corousel/corousel-3.png',
     title: 'Your Trusted Partner in ',
     highlight: 'Industrial Solutions',
     subtitle: 'Industry Leaders in Automation\nOur mission is to provide cost-effective, reliable, and innovative automation solutions that enhance productivity and operational efficiency across a wide range of sectors.',
     badge: '',
   },
   {
-    image: '/images/corousel/corousel-4.jpg',
+    image: '/images/corousel/corousel-4.png',
     title: 'Over ',
     highlight: 'Two Decades',
     subtitle: 'A Legacy of Innovation\nInterlink Enterprises is proud to be a pioneer in industrial automation, offering a wide range of solutions for the oil & gas, cement, power, chemical, and textile industries in Pakistan.',
