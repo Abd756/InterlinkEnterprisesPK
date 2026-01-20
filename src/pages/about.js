@@ -27,8 +27,8 @@ export default function About() {
       <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
         {/* IMAGE PLACEHOLDER: Background Image of Industrial Plant or Office */}
         <div className="absolute inset-0 bg-gray-800">
-          {/* <img src="/path/to/hero-bg.jpg" alt="Hero Background" className="w-full h-full object-cover opacity-40" /> */}
-          <div className="w-full h-full bg-gradient-to-r from-gray-900 via-blue-900/40 to-gray-900 absolute inset-0 mix-blend-overlay"></div>
+          <img src="images/About-Page-Banner.png" alt="Hero Background" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
