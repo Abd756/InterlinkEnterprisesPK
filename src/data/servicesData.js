@@ -19,31 +19,31 @@ const servicesData = [
     },
     {
         id: 4,
-        image: '/images/Services/Instrument Calibration.jpeg',
+        image: '/images/Services/Instrument Calibration.png',
         title: 'Instrument Calibration',
         desc: 'High-precision calibration services for all industrial instruments to ensure measurement accuracy.'
     },
     {
         id: 5,
-        image: '/images/Services/Power Distribution Systems.jpeg',
+        image: '/images/Services/Power Distribution.png',
         title: 'Power Distribution',
         desc: 'Design and implementation of robust power distribution systems for stable and safe energy delivery.'
     },
     {
         id: 6,
-        image: '/images/Services/Plant Shutdown Services.jpeg',
+        image: '/images/Services/Plant Shutdown Service.png',
         title: 'Plant Shutdown Services',
         desc: 'Efficiently managed plant shutdown and maintenance services to minimize downtime and maximize safety.'
     },
     {
         id: 7,
-        image: '/images/Services/Products Sales and After-Sale Services.jpeg',
+        image: '/images/Services/After-Sale Support.png',
         title: 'After-Sale Support',
         desc: 'Comprehensive post-installation support and technical services to keep your systems running optimally.'
     },
     {
         id: 8,
-        image: '/images/Services/Cable Management Systems.jpeg',
+        image: '/images/Services/Cable Management.png',
         title: 'Cable Management',
         desc: 'Professional engineering of heavy-duty cable tray systems and routing for organized facility wiring.'
     }

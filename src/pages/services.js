@@ -23,28 +23,39 @@ export default function Services() {
       {/* ----------------------------------------------------------------------------------
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
-      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 overflow-hidden flex items-center justify-center">
-        {/* Abstract Background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px]"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-orange-500/10 rounded-full blur-[100px]"></div>
+      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 text-white overflow-hidden flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="images/Services/Service-Page-Banner.png" // Correct path based on your public folder structure
+            alt="Products Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Light Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        {/* Background Patterns */}
+        <div className="absolute inset-0 opacity-10 blur-[2px] pointer-events-none z-0">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-500 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6"
           >
-            Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-400">Excellence</span> Through Innovation
+            Our  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-400">Services</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
           >
-            We provide end-to-end industrial services, from advanced automation and electrical commissioning to precision calibration and complete project management.
+            End-to-end industrial automation and engineering services.
           </motion.p>
         </div>
       </section>
