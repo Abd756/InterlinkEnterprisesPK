@@ -25,8 +25,15 @@ export default function Contact() {
          1. HERO SECTION
          ---------------------------------------------------------------------------------- */}
       <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] bg-gray-900 overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 opacity-10 blur-[2px] pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="images/ContactUs-Page-Banner.png" // Correct path based on your public folder structure
+            alt="ContactUs Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Light Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">

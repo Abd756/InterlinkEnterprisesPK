@@ -26,8 +26,13 @@ export default function About() {
          ---------------------------------------------------------------------------------- */}
       <section className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
         {/* IMAGE PLACEHOLDER: Background Image of Industrial Plant or Office */}
-        <div className="absolute inset-0 bg-gray-800">
-          <img src="images/About-Page-Banner.png" alt="Hero Background" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 z-0">
+          <img
+            src="images/About-Page-Banner.png" // Correct path based on your public folder structure
+            alt="AboutUs Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Light Overlay for text readability */}
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
 

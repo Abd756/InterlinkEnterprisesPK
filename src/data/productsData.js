@@ -13,14 +13,14 @@ export const products = [
         id: 1,
         name: "Cable & Tray",
         category: "Accessories",
-        image: "/Products/Accessories/Cable & Tray.jpg",
+        image: "/Products/Accessories/Cable & Tray.png",
         description: "High-quality cable management solutions including heavy-duty trays and mounting systems."
     },
     {
         id: 2,
         name: "Tube & Fittings",
         category: "Accessories",
-        image: "/Products/Accessories/Tube & Fittings.webp",
+        image: "/Products/Accessories/Tube & Fittings.png",
         description: "Precision-engineered tubes and fittings for industrial fluid and gas control systems."
     },
     {
@@ -34,7 +34,7 @@ export const products = [
         id: 4,
         name: "Valve Manifolds",
         category: "Accessories",
-        image: "/Products/Accessories/Valve Manifolds.webp",
+        image: "/Products/Accessories/Valve Manifolds.png",
         description: "Customizable valve manifold assemblies for streamlined process control."
     },
 
@@ -43,21 +43,21 @@ export const products = [
         id: 5,
         name: "Control Consoles",
         category: "Control Room Hardware",
-        image: "/Products/ControlRoomHarware/Control Consoles.jpg",
+        image: "/Products/ControlRoomHarware/Control Consoles.png",
         description: "Ergonomic control consoles designed for modern industrial monitoring and command centers."
     },
     {
         id: 6,
         name: "Industrial Controllers",
         category: "Control Room Hardware",
-        image: "/Products/ControlRoomHarware/Controllers.jpg",
+        image: "/Products/ControlRoomHarware/Controllers.png",
         description: "Advanced industrial controllers for precise management of complex manufacturing processes."
     },
     {
         id: 7,
         name: "Programmable Logic Controllers",
         category: "Control Room Hardware",
-        image: "/Products/ControlRoomHarware/Programmable Logic.jpg",
+        image: "/Products/ControlRoomHarware/Programmable Logic Controllers.png",
         description: "Reliable PLC solutions from world-class manufacturers for automation and logic control."
     },
     {
@@ -71,7 +71,7 @@ export const products = [
         id: 9,
         name: "Uninterruptible Power Supply (UPS)",
         category: "Control Room Hardware",
-        image: "/Products/ControlRoomHarware/UPS.webp",
+        image: "/Products/ControlRoomHarware/UPS.png",
         description: "Industrial-grade UPS systems to ensure continuous power for critical control systems."
     },
 
@@ -80,49 +80,49 @@ export const products = [
         id: 10,
         name: "Circuit Breakers",
         category: "Electrical",
-        image: "/Products/Electrical/Breakers.gif",
+        image: "/Products/Electrical/Breakers.png",
         description: "High-reliability circuit breakers for industrial power protection and safety."
     },
     {
         id: 11,
         name: "Cable Accessories",
         category: "Electrical",
-        image: "/Products/Electrical/Cable & Cable Trays_Ties.jpeg",
+        image: "/Products/Electrical/Cable & Tray.png",
         description: "Essential electrical accessories for robust and safe cable installations."
     },
     {
         id: 12,
         name: "Electrical Conduits",
         category: "Electrical",
-        image: "/Products/Electrical/Conduits.jpg",
+        image: "/Products/Electrical/Conduits.png",
         description: "Durable conduits for protecting electrical wiring in harsh industrial environments."
     },
     {
         id: 13,
         name: "Electrical Enclosures",
         category: "Electrical",
-        image: "/Products/Electrical/Enclosure.jpg",
+        image: "/Products/Electrical/Enclosure.png",
         description: "IP-rated enclosures for protecting electrical components from dust and moisture."
     },
     {
         id: 14,
         name: "Electrical Fittings",
         category: "Electrical",
-        image: "/Products/Electrical/Fittings.jpg",
+        image: "/Products/Electrical/Tube & Fittings.png",
         description: "Comprehensive range of electrical fittings for industrial power distribution."
     },
     {
         id: 15,
         name: "Power Fuses",
         category: "Electrical",
-        image: "/Products/Electrical/Fuses.jpg",
+        image: "/Products/Electrical/Power Fuses.png",
         description: "Fast-acting and slow-blow industrial fuses for electrical circuit protection."
     },
     {
         id: 16,
         name: "Indication Lamps",
         category: "Electrical",
-        image: "/Products/Electrical/Lamps.jpg",
+        image: "/Products/Electrical/Lamps.png",
         description: "High-visibility status and warning lamps for industrial control panels."
     },
     {
